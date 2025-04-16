@@ -1,0 +1,36 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  height: 100px;
+}
+
+.anything-boy {
+  margin-left: 40px;
+  height: 80px;
+}
+
+h1 {
+  margin-left: 20px;
+  font-size: 4rem;
+}
+
+nav {
+  display: flex;
+  height: calc(100vh - 100px);
+  align-items: center;
+  margin-left: 50px;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
