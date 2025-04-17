@@ -20,6 +20,14 @@ a:visited {
   color: #000;
 }
 
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #fff;
+}
+
 .header {
   display: flex;
   align-items: center;
@@ -57,6 +65,11 @@ h1 {
   font-weight: 900;
 }
 
+p {
+  color: #fff;
+  font-size: 1.5rem;
+}
+
 main {
   background-color: #555a;
   display: flex;
@@ -80,14 +93,9 @@ main {
   flex: 1;
 }
 
-.flex-right :first-child {
-  margin-top: 20vh;
-}
-
-.promo-vids {
-  margin: 100px;
-  width: 80%;
-  height: 50vh;
+.spaced-heading {
+  color: #fff;
+  margin-top: 15vh;
 }
 
 nav {
@@ -107,7 +115,7 @@ nav {
   text-shadow: 2px 2px #000;
 }
 
-li:hover {
+.nav-list li:hover {
   margin-left: 10px;
 }
 
@@ -116,4 +124,76 @@ li:hover {
   min-height: 100vh;
   min-width: 100vw;
   z-index: -1;
+}
+
+/* PROMO */
+
+.promo-main {
+  background-color: #444;
+}
+
+.promo-vids {
+  margin: 50px 100px;
+  width: 80%;
+  height: 50vh;
+}
+
+/* CONTACT */
+
+.contact-main {
+  width: 100vw;
+  height: 100vh;
+  background-color: #444a;
+}
+
+.contact-main .flex-right {
+  justify-content: center;
+}
+
+.contact-main .flex-right :first-child {
+  margin-top: 0;
+}
+
+.anything-boy-bg {
+  position: absolute;
+  bottom: -200px;
+  right: -200px;
+}
+
+.contact-list {
+  font-size: 3rem;
+  color: #fff;
+  z-index: 1;
+}
+
+/* MUSIC VIDEOS */
+
+.music-videos-main {
+  background-color: #444a;
+}
+
+/* ABOUT */
+
+.about-main {
+  height: 100vh;
+}
+
+.about-main .flex-right .about {
+  width: 50%;
+  margin-top: 0;
+  align-items: start;
+}
+
+/* PROJECTIONS */
+
+.projections-main {
+  height: 100vh;
+  p {
+    width: 80%;
+    margin-bottom: 30px;
+  }
+  .flex-right img {
+    width: 80%;
+    border-radius: 10px;
+  }
 }
