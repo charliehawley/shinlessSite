@@ -136,7 +136,7 @@ nav {
 .promo-vids {
   margin: 50px 100px;
   width: 80%;
-  height: 50vh;
+  aspect-ratio: 16/9;
 }
 
 /* CONTACT */
@@ -170,7 +170,7 @@ nav {
 /* MUSIC VIDEOS */
 
 .music-videos-main {
-  background-color: #444a;
+  background-color: #444;
 }
 
 /* ABOUT */
@@ -179,7 +179,7 @@ nav {
   height: 100vh;
 }
 
-.about-main .flex-right .about {
+.about {
   width: 50%;
   margin-top: 0;
   align-items: start;
@@ -196,5 +196,96 @@ nav {
   .flex-right img {
     width: 80%;
     border-radius: 10px;
+  }
+}
+
+/* MEDIA QUERIES */
+
+@media (max-width: 1120px) {
+  main {
+    flex-direction: column;
+    display: block;
+  }
+
+  .anything-boy {
+    display: none;
+  }
+
+  h1 {
+    padding-left: 10px;
+    font-size: 2rem;
+  }
+
+  .flex-left {
+    nav {
+      margin: 0;
+      position: fixed;
+      top: 100px;
+      height: 70px;
+      width: 100vw;
+      background-color: #333;
+      border-bottom: solid 1px #000;
+    }
+    ul {
+      display: flex;
+      li {
+        padding: 10px;
+        font-size: 1.2rem;
+        margin: 0;
+      }
+    }
+  }
+  .flex-right {
+    margin: 30px 5vw;
+    width: 90vw;
+  }
+  .spaced-heading,
+  .flex-right p {
+    margin-top: 100px;
+    width: 80%;
+    font-size: 1rem;
+    text-align: center;
+  }
+
+  .promo-vids {
+    margin: 20px 10px;
+  }
+
+  .contact-list {
+    position: relative;
+    font-size: 2rem;
+  }
+
+  .contact-main .flex-right :first-child {
+    margin-top: 100px;
+  }
+
+  .anything-boy-bg {
+    bottom: -400px;
+    right: -600px;
+  }
+
+  .about {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    width: 90%;
+    margin: 170px 0;
+    h2 {
+      margin-top: 0;
+      font-size: 2rem;
+    }
+    p {
+      width: 90%;
+      text-align: left;
+      font-size: 1.5rem;
+      margin-top: 10px;
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .contact-list {
+    font-size: 1.5rem;
   }
 }
