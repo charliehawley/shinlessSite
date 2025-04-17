@@ -8,7 +8,6 @@
 
 body {
   font-family: 'Familjen Grotesk';
-  overflow: hidden;
 }
 
 li {
@@ -18,7 +17,7 @@ li {
 a,
 a:visited {
   text-decoration: none;
-  color: #fff;
+  color: #000;
 }
 
 .header {
@@ -29,12 +28,13 @@ a:visited {
   border-bottom: solid 1px #000;
 }
 
-.head-left {
+.head-left a {
   display: flex;
   align-items: center;
 }
 
 .head-right {
+  margin-right: 2rem;
   ul {
     display: flex;
     align-items: center;
@@ -47,7 +47,7 @@ a:visited {
 }
 
 .anything-boy {
-  margin-left: 50px;
+  margin: 0px 30px 0px 30px;
   width: 4rem;
 }
 
@@ -58,20 +58,53 @@ h1 {
 }
 
 main {
-  background-color: #000a;
+  background-color: #555a;
+  display: flex;
+  justify-content: right;
+  overflow: hidden;
+}
+
+.flex-left {
+  width: 30vw;
+}
+
+.flex-right {
+  padding: auto 50px;
+  width: 70vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow-y: auto;
+  max-height: 100%;
+  flex: 1;
+}
+
+.flex-right :first-child {
+  margin-top: 20vh;
+}
+
+.promo-vids {
+  margin: 100px;
+  width: 80%;
+  height: 50vh;
 }
 
 nav {
+  position: fixed;
   display: flex;
   height: calc(100vh - 100px);
   align-items: center;
-  margin-left: calc(50px + 4rem);
+  margin-left: calc(4rem + 80px);
 }
 
 .nav-list li {
   margin: 80px 0px;
   font-size: 3rem;
-  color: #fff;
+  a {
+    color: #fff;
+  }
+  text-shadow: 2px 2px #000;
 }
 
 li:hover {
@@ -80,7 +113,7 @@ li:hover {
 
 .bg-vid {
   position: absolute;
-  /* min-height: 100vh; */
+  min-height: 100vh;
   min-width: 100vw;
   z-index: -1;
 }
