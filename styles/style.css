@@ -78,6 +78,7 @@ main {
 }
 
 .flex-left {
+  margin-top: 100px;
   width: 30vw;
 }
 
