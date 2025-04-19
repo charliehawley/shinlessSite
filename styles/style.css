@@ -94,7 +94,6 @@ main {
   width: 70vw;
   display: flex;
   flex-direction: column;
-  /* justify-content: center; */
   align-items: center;
   overflow-y: auto;
   overflow-x: hidden;
@@ -210,6 +209,9 @@ nav {
       font-size: 2rem;
     }
   }
+  .bg-vid {
+    max-width: 100%;
+  }
 }
 
 @media (max-width: 768px) {
@@ -225,13 +227,6 @@ nav {
   h1 {
     padding-left: 10px;
     font-size: 2rem;
-  }
-
-  /* NEED TO CENTER VIDEO RESONSIVELY */
-  .bg-vid {
-    /* transform: translateX(-50vw) translateY(-50vh); */
-    max-width: 100%;
-    /* object-fit: cover; */
   }
 
   .flex-left {
