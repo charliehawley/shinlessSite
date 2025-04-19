@@ -6,8 +6,13 @@
   box-sizing: border-box;
 }
 
+:root {
+  --header-height: 100px;
+}
+
 body {
   font-family: 'Familjen Grotesk';
+  background-color: #444;
 }
 
 li {
@@ -32,7 +37,7 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 100px;
+  height: var(--header-height);
   border-bottom: solid 1px #000;
 }
 
@@ -71,14 +76,15 @@ p {
 }
 
 main {
-  background-color: #555a;
+  /* background-color: #444a; */
   display: flex;
   justify-content: right;
   overflow: hidden;
+  height: 100vh;
 }
 
 .flex-left {
-  margin-top: 100px;
+  margin-top: var(--header-height);
   width: 30vw;
 }
 
@@ -90,6 +96,7 @@ main {
   justify-content: center;
   align-items: center;
   overflow-y: auto;
+  overflow-x: hidden;
   max-height: 100%;
   flex: 1;
 }
@@ -102,7 +109,7 @@ main {
 nav {
   position: fixed;
   display: flex;
-  height: calc(100vh - 100px);
+  height: calc(100vh - var(--header-height));
   align-items: center;
   margin-left: calc(4rem + 80px);
 }
@@ -125,16 +132,13 @@ nav {
   min-height: 100vh;
   min-width: 100vw;
   z-index: -1;
+  object-fit: cover;
 }
 
 /* PROMO */
 
-.promo-main {
-  background-color: #444;
-}
-
 .promo-vids {
-  margin: 50px 100px;
+  margin: 50px var(--header-height);
   width: 80%;
   aspect-ratio: 16/9;
 }
@@ -144,7 +148,7 @@ nav {
 .contact-main {
   width: 100vw;
   height: 100vh;
-  background-color: #444a;
+  background-color: #222a;
 }
 
 .contact-main .flex-right {
@@ -168,10 +172,6 @@ nav {
 }
 
 /* MUSIC VIDEOS */
-
-.music-videos-main {
-  background-color: #444;
-}
 
 /* ABOUT */
 
@@ -197,11 +197,21 @@ nav {
     width: 80%;
     border-radius: 10px;
   }
+  background-color: #333a;
 }
 
 /* MEDIA QUERIES */
 
-@media (max-width: 1120px) {
+@media (max-width: 1200px) {
+  nav {
+    margin-left: 50px;
+    .nav-list li {
+      font-size: 2rem;
+    }
+  }
+}
+
+@media (max-width: 768px) {
   main {
     flex-direction: column;
     display: block;
@@ -216,11 +226,18 @@ nav {
     font-size: 2rem;
   }
 
+  /* NEED TO CENTER VIDEO RESONSIVELY */
+  .bg-vid {
+    /* transform: translateX(-50vw) translateY(-50vh); */
+    max-width: 100%;
+    /* object-fit: cover; */
+  }
+
   .flex-left {
     nav {
       margin: 0;
       position: fixed;
-      top: 100px;
+      top: var(--header-height);
       height: 70px;
       width: 100vw;
       background-color: #333;
@@ -241,7 +258,7 @@ nav {
   }
   .spaced-heading,
   .flex-right p {
-    margin: 100px 0 10px;
+    margin: var(--header-height) 0 10px;
     width: 80%;
     font-size: 1.5rem;
     text-align: center;
@@ -257,7 +274,7 @@ nav {
   }
 
   .contact-main .flex-right :first-child {
-    margin-top: 100px;
+    margin-top: var(--header-height);
   }
 
   .anything-boy-bg {
