@@ -214,6 +214,7 @@ nav {
 
 @media (max-width: 1200px) {
   nav {
+    justify-content: center;
     margin-left: 50px;
     .nav-list li {
       font-size: 2rem;
