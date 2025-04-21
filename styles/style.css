@@ -152,6 +152,20 @@ nav {
   aspect-ratio: 16/9;
 }
 
+/* REEL */
+
+.reel-aside {
+  height: calc(100vh - --header-height);
+  padding: 100px 0 0 0;
+  text-align: center;
+}
+
+.reel-vid {
+  margin-top: 100px;
+  width: 80%;
+  aspect-ratio: 16/9;
+}
+
 /* CONTACT */
 
 .contact-main {
