@@ -8,6 +8,7 @@
 
 :root {
   --header-height: 100px;
+  --link: #ddf;
 }
 
 body {
@@ -31,6 +32,7 @@ header {
   left: 0;
   width: 100%;
   background: #fff;
+  z-index: 2;
 }
 
 .header {
@@ -118,6 +120,7 @@ nav {
   height: calc(100vh - var(--header-height));
   align-items: center;
   margin-left: calc(4rem + 80px);
+  z-index: 2;
 }
 
 .nav-list li {
@@ -152,6 +155,7 @@ nav {
 /* CONTACT */
 
 .contact-main {
+  position: fixed;
   width: 100vw;
   height: 100vh;
   background-color: #222a;
@@ -172,25 +176,29 @@ nav {
   z-index: -1;
 }
 
+.contact-list {
+  z-index: 0;
+}
+
 .contact-list p,
 .contact-list a {
   font-size: 2rem;
   a {
-    color: #ddf;
+    color: var(--link);
   }
 }
 
-.contact-list a:hover {
+.contact-list a:hover,
+.about p a:hover {
   text-decoration: underline;
 }
-
-/* MUSIC VIDEOS */
 
 /* ABOUT */
 
 .about-main {
   height: 100vh;
   background-color: #222a;
+  position: fixed;
 }
 
 .about {
@@ -200,6 +208,10 @@ nav {
   flex-direction: column;
   justify-content: center;
   align-items: start;
+}
+
+.about p a {
+  color: var(--link);
 }
 
 /* PROJECTIONS */
@@ -231,6 +243,7 @@ nav {
     max-width: 100%;
   }
   .about {
+    margin-top: 30px;
     width: 90%;
   }
 }
@@ -300,10 +313,14 @@ nav {
   }
 
   .about {
-    height: 60vh;
+    height: calc(100vh - --header-height);
+    h2 {
+      font-size: 1.5rem;
+    }
     p {
       width: 90%;
       margin-top: 10px;
+      font-size: 1.2rem;
     }
   }
 }
