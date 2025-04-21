@@ -26,6 +26,11 @@ a:visited {
   color: #000;
 }
 
+.active {
+  text-decoration: underline;
+  /* font-style: italic; */
+}
+
 header {
   position: fixed;
   top: 0;
