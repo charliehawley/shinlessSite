@@ -116,7 +116,6 @@ main {
 .spaced-heading {
   width: 80%;
   color: #fff;
-  /* margin-top: 5vh; */
 }
 
 nav {
@@ -152,21 +151,7 @@ nav {
 /* PROMO */
 
 .promo-vids {
-  margin: 50px;
-  width: 80%;
-  aspect-ratio: 16/9;
-}
-
-/* REEL */
-
-.reel-aside {
-  width: 100%;
-  margin: auto;
-  text-align: center;
-}
-
-.reel-vid {
-  margin-top: 100px;
+  margin: 30px 50px;
   width: 80%;
   aspect-ratio: 16/9;
 }
@@ -329,7 +314,7 @@ nav {
 
   .spaced-heading {
     width: 80%;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     text-align: center;
   }
 
