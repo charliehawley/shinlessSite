@@ -29,6 +29,16 @@ a:visited {
   color: #000;
 }
 
+.inner-link {
+  color: #000;
+  background-color: #fff;
+}
+
+.inner-link:hover {
+  color: #fff;
+  background-color: #000;
+}
+
 .active {
   text-decoration: underline;
   /* font-style: italic; */
