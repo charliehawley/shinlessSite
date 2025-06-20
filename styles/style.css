@@ -132,7 +132,7 @@ main {
 
 .spaced-heading {
   margin-top: var(--header-2-height);
-  width: 80%;
+  width: 100%;
   color: #fff;
 }
 
@@ -172,6 +172,22 @@ nav {
   margin: 30px 50px;
   width: 80%;
   aspect-ratio: 16/9;
+}
+
+.gallery {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 400px);
+  gap: 5px;
+  justify-content: center;
+}
+
+.gallery-item {
+  margin: 5%;
+  cursor: pointer;
+  img {
+    width: 100%;
+  }
 }
 
 /* CONTACT */
