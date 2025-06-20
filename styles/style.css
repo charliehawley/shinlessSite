@@ -11,6 +11,7 @@
   --header-height-small: 50px;
   --link: #ddf;
   --header-2-height: 50px;
+  --thumb-size: 400px;
 }
 
 body {
@@ -178,15 +179,33 @@ nav {
   width: 100%;
   display: grid;
   grid-template-columns: repeat(auto-fit, 400px);
+  grid-template-rows: repeat(8, 300px);
   gap: 5px;
   justify-content: center;
 }
 
 .gallery-item {
-  margin: 5%;
+  position: relative;
+  margin: 2%;
   cursor: pointer;
-  img {
+  img,
+  video {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
+  }
+  video {
+    z-index: 0;
+  }
+  img {
+    z-index: 1;
+  }
+}
+
+.gallery-item:hover {
+  img {
+    display: none;
   }
 }
 
