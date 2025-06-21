@@ -1,5 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Familjen+Grotesk:ital,wght@0,400..700;1,400..700&display=swap');
 
+@font-face {
+  font-family: 'made outer sans';
+  src: url(./assets/outersansblack.otf);
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -81,6 +86,15 @@ header {
   }
 }
 
+ul li a {
+  font-family: 'made outer sans';
+}
+
+.logo {
+  max-width: 20%;
+  margin: 10px;
+}
+
 .anything-boy {
   margin: 0px 30px 0px 30px;
   width: 4rem;
@@ -94,12 +108,14 @@ header {
 }
 
 h1 {
+  font-family: 'made outer sans';
   margin-left: 10px;
   font-size: 4rem;
   font-weight: 900;
 }
 
 h2 {
+  font-family: 'made outer sans';
   font-size: 2rem;
   color: #fff;
   text-shadow: 2px 2px #000;
@@ -145,13 +161,13 @@ nav {
   display: flex;
   height: calc(100vh - var(--header-height));
   align-items: center;
-  margin-left: calc(4rem + 80px);
+  margin-left: 80px;
   z-index: 2;
 }
 
 .nav-list li {
   margin: 80px 0px;
-  font-size: 3rem;
+  font-size: 2.5rem;
   a {
     color: #fff;
   }
@@ -244,6 +260,9 @@ nav {
 
 .contact-list {
   z-index: 0;
+  h2 {
+    margin-top: 40px;
+  }
 }
 
 .contact-list p,
@@ -427,6 +446,12 @@ nav {
 }
 
 @media (max-width: 500px) {
+  .flex-left ul li,
+  .head-right ul li {
+    padding: 2px;
+    font-size: 0.9rem;
+  }
+
   .contact-list p,
   .contact-list p a {
     font-size: 1.5rem;
