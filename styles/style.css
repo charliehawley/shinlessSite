@@ -11,7 +11,7 @@
   --header-height-small: 50px;
   --link: #ddf;
   --header-2-height: 50px;
-  --thumb-size: 400px;
+  --thumbs: 400px;
 }
 
 body {
@@ -181,7 +181,7 @@ nav {
 .gallery {
   width: 100%;
   display: grid;
-  grid-template-columns: repeat(auto-fit, 400px);
+  grid-template-columns: repeat(auto-fit, var(--thumbs));
   grid-template-rows: repeat(8, 300px);
   gap: 5px;
   justify-content: center;
@@ -196,7 +196,7 @@ nav {
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
+    width: var(--thumbs);
   }
   video {
     z-index: 0;
@@ -356,6 +356,7 @@ nav {
     position: fixed;
     top: var(--header-height-small);
     left: 0;
+    z-index: 3;
     nav {
       margin: 0;
       height: var(--header-2-height);
