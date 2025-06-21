@@ -3,6 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css"
+    />
     <link rel="stylesheet" href="./styles/style.css" />
     <title>Shinless</title>
   </head>
@@ -44,17 +48,16 @@
         </nav>
       </aside>
       <aside class="flex-right">
-        <h2 class="spaced-heading">Showreel</h2>
-        <iframe
-          class="promo-vids"
-          src="https://www.youtube.com/embed/lhZ4MN6Vu6M"
-          title="shinlessReel"
-          frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          referrerpolicy="strict-origin-when-cross-origin"
-          allowfullscreen
-        ></iframe>
+        <a class="reel-link" href="https://youtu.be/lhZ4MN6Vu6M" data-fancybox
+          ><img
+            class="big-thumb"
+            src="./styles/images/reel.png"
+            alt="nvidia ansel"
+          />
+        </a>
       </aside>
     </main>
+    <script src="./scripts/reel.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.js"></script>
   </body>
 </html>
