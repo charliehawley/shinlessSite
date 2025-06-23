@@ -368,9 +368,9 @@ nav {
   .head-right {
     margin-right: 2px;
     ul li {
-      margin: 10px;
+      margin: 7px;
       a {
-        font-size: 0.8rem;
+        font-size: 0.9rem;
       }
     }
   }
@@ -441,6 +441,11 @@ nav {
 
   .promo-vids {
     margin: 20px 10px;
+  }
+
+  .gallery-item a video {
+    width: calc(var(--thumbs) - 3px);
+    transform: translate(0, 1px);
   }
 
   .contact-list {
