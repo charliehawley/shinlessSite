@@ -148,8 +148,15 @@ main {
   height: calc(100vh - var(--header-height));
   flex: 1;
   overflow-y: scroll;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
 
+/* REMOVE SCROLLBAR */
+/* https://stackoverflow.com/questions/16670931/hide-scroll-bar-but-while-still-being-able-to-scroll */
+.flex-right::-webkit-scrollbar {
+  display: none;
+}
 .flex-right:last-child {
   padding-bottom: 100px;
 }
