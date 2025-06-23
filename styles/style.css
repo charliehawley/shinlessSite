@@ -16,7 +16,7 @@
   --header-height-small: 50px;
   --link: #ddf;
   --header-2-height: 50px;
-  --thumbs: 400px;
+  --thumbs: 300px;
 }
 
 .hide {
@@ -208,7 +208,7 @@ nav {
   width: 100%;
   display: grid;
   grid-template-columns: repeat(auto-fit, var(--thumbs));
-  grid-template-rows: repeat(8, 300px);
+  grid-template-rows: repeat(4, 240px);
   gap: 10px;
   justify-content: center;
   margin: 30px 0px;
@@ -336,8 +336,7 @@ nav {
   max-width: 90%;
 }
 
-/* MEDIA QUERIES */
-
+/*--------------- MEDIA QUERIES ---------------*/
 @media (max-width: 1200px) {
   nav {
     justify-content: center;
@@ -354,6 +353,10 @@ nav {
   .about {
     margin-top: 30px;
     width: 90%;
+  }
+
+  .gallery {
+    grid-template-rows: repeat(8, 240px);
   }
 }
 
