@@ -375,10 +375,10 @@ nav {
 .controls {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  margin-top: 3vh;
+  margin-top: 30px;
   border: inset 5px #666;
   border-radius: 10px;
-  height: 10vh;
+  height: 100px;
   width: 90%;
 
   background-color: #e5e5f7;
@@ -389,19 +389,10 @@ nav {
 
 .switch,
 .power {
-  max-height: 100%;
+  max-height: 90px;
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-.power {
-  position: relative;
-  max-height: 100%;
-  img {
-    max-height: 70px;
-    z-index: 3;
-  }
 }
 
 button {
