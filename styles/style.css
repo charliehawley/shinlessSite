@@ -72,10 +72,14 @@ header {
   border-bottom: solid 1px #000;
 }
 
-.head-left a {
+.head-left {
+  max-height: 100%;
+}
+
+/* .head-left a {
   display: flex;
   align-items: center;
-}
+} */
 
 .head-right {
   margin-right: 2rem;
@@ -94,18 +98,13 @@ ul li a {
   font-family: 'made outer sans';
 }
 
-.logo {
-  max-width: 20%;
-  margin: 10px;
-}
-
 .anything-boy {
-  margin: 0px 30px 0px 30px;
-  width: 4rem;
+  height: calc(var(--header-height) - 20px);
 }
 
 .hero-boy {
-  max-width: 400px;
+  width: 320px;
+  height: 270px;
   margin: auto;
 }
 
@@ -368,7 +367,7 @@ nav {
   .head-right {
     margin-right: 2px;
     ul li {
-      margin: 7px;
+      margin: 5px;
       a {
         font-size: 0.9rem;
       }
@@ -381,11 +380,12 @@ nav {
   }
 
   .anything-boy {
-    display: none;
+    height: calc(var(--header-height-small) - 10px);
   }
 
   .hero-boy {
-    width: 50vw;
+    height: 180px;
+    width: 220px;
   }
 
   .anything-boy-bg {
