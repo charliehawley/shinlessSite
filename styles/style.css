@@ -32,12 +32,24 @@ body {
 
 li {
   list-style: none;
+  font-family: 'made outer sans';
 }
 
 a,
 a:visited {
   text-decoration: none;
   color: #000;
+}
+
+.nav-list li {
+  .active {
+    color: #91c4ff;
+  }
+}
+.head-right ul li {
+  .active {
+    color: #1900ff;
+  }
 }
 
 .inner-link {
@@ -48,10 +60,6 @@ a:visited {
 .inner-link:hover {
   color: #fff;
   background-color: #000;
-}
-
-.active {
-  text-decoration: underline;
 }
 
 header {
@@ -76,11 +84,6 @@ header {
   max-height: 100%;
 }
 
-/* .head-left a {
-  display: flex;
-  align-items: center;
-} */
-
 .head-right {
   margin-right: 2rem;
   ul {
@@ -92,10 +95,6 @@ header {
       font-size: 1.25rem;
     }
   }
-}
-
-ul li a {
-  font-family: 'made outer sans';
 }
 
 .anything-boy {
@@ -176,7 +175,6 @@ nav {
   a {
     color: #fff;
   }
-  text-shadow: 2px 2px #000;
 }
 
 .nav-list li:hover {
