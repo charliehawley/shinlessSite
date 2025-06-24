@@ -4,8 +4,8 @@ const channel = document.querySelector('.channel');
 const pause = '⏹';
 const play = '▶';
 const channels = [
-  'https://www.youtube.com/embed/0XxNhQSj6_I?&autoplay=1&loop=1',
-  'https://www.youtube.com/embed/nEhKFxeE9fM?&autoplay=1&loop=1',
+  'https://www.youtube.com/embed/0XxNhQSj6_I?autoplay=1&loop=1&rel=0&showinfo=0&playlist=0XxNhQSj6_I',
+  'https://www.youtube.com/embed/nEhKFxeE9fM?autoplay=1&loop=1&rel=0&showinfo=0&playlist=nEhKFxeE9fM',
 ];
 
 playPause.addEventListener('click', () => {
