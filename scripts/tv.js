@@ -4,8 +4,8 @@ const channel = document.querySelector('.channel');
 const pause = '⏹';
 const play = '▶';
 const channels = [
-  'https://youtu.be/0XxNhQSj6_I',
-  'https://youtu.be/nEhKFxeE9fM',
+  'https://www.youtube.com/embed/0XxNhQSj6_I?&autoplay=1&loop=1',
+  'https://www.youtube.com/embed/nEhKFxeE9fM?&autoplay=1&loop=1',
 ];
 
 playPause.addEventListener('click', () => {
@@ -22,5 +22,5 @@ playPause.addEventListener('click', () => {
 
 switcher.addEventListener('click', () => {
   let currentChannel = Math.floor(Math.random() * channels.length);
-  console.log(currentChannel);
+  channel.setAttribute('src', channels[currentChannel]);
 });

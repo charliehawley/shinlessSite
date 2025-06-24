@@ -352,6 +352,7 @@ nav {
   width: 90%;
   border-radius: 10px;
   border: inset 20px #5d5d5d;
+  overflow: hidden;
 }
 
 .crt {
