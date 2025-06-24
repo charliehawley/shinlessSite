@@ -8,6 +8,11 @@ const channels = [
   'https://www.youtube.com/embed/nEhKFxeE9fM?autoplay=1&loop=1&rel=0&showinfo=0&playlist=nEhKFxeE9fM',
 ];
 
+document.addEventListener('DOMContentLoaded', (event) => {
+  let currentChannel = Math.floor(Math.random() * channels.length);
+  channel.setAttribute('src', channels[currentChannel]);
+});
+
 playPause.addEventListener('click', () => {
   if (playPause.innerText == play) {
     console.log('playing');

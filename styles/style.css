@@ -390,8 +390,6 @@ nav {
   position: relative;
   top: -200%;
   left: 0;
-  background-image: url('./images/reel.png');
-  background-size: cover;
   z-index: 2;
 }
 
