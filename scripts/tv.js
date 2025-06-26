@@ -1,5 +1,5 @@
 const tv = document.querySelector('.screen');
-const playPause = document.querySelector('.play-pause');
+const standby = document.querySelector('#standby');
 const indicator = document.querySelector('#indicator');
 const switcher = document.querySelector('.switch');
 let channel = document.querySelector('.channel');
@@ -24,6 +24,7 @@ const muter = document.querySelector('#mute-toggle');
 //   'EXqOYohC39A',
 //   'TtXuT02jfdU',
 // ];
+
 const channels = [
   'peacebloom.mp4',
   'symbiosis.mp4',
@@ -45,17 +46,8 @@ const channels = [
   'withoutASound.mp4',
 ];
 
-// INITIALISE IFRAME-------------------
-// document.addEventListener('DOMContentLoaded', (event) => {
-//   let currentChannel = Math.floor(Math.random() * channels.length);
-//   channel.setAttribute(
-//     'src',
-//     './styles/videos/channels/' + currentChannel
-//   );
-// });
-
 // HIDE/UNHIDE VIDEO ON CLICK -----------
-playPause.addEventListener('click', () => {
+standby.addEventListener('click', () => {
   if (indicator.classList.contains('indi-off')) {
     indicator.classList.add('indi-on');
     indicator.classList.remove('indi-off');
@@ -73,19 +65,6 @@ playPause.addEventListener('click', () => {
     channel.setAttribute('src', '');
   }
 });
-
-// RANDOMISE VIDEO IDS USING channels ARRAY----------
-// switcher.addEventListener('click', () => {
-//   let currentChannel = Math.floor(Math.random() * channels.length);
-//   channel.setAttribute(
-//     'src',
-//     'https://www.youtube.com/embed/' +
-//       channels[currentChannel] +
-//       '?autoplay=1&loop=1&controls=0&modestbranding=1&rel=0&showinfo=0&playlist=' +
-//       channels[currentChannel]
-//   );
-//   console.log(channels[currentChannel]);
-// });
 
 // MUTE ------------------------
 muter.addEventListener('click', () => {
