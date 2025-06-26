@@ -3,6 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="./styles/style.css" />
     <title>Shinless</title>
   </head>
@@ -42,19 +46,35 @@
           <div class="screen">
             <div class="crt"></div>
             <div class="glare"></div>
-            <iframe
-              class="channel hide"
-              src=""
-              title="The Mantis Opera - Get Along"
-              frameborder="0"
-              allow="autoplay; picture-in-picture;"
-              referrerpolicy="strict-origin-when-cross-origin"
-              allowfullscreen
-            ></iframe>
+            <video class="channel" src="" autoplay muted></video>
           </div>
+          <div id="indicator" class="indi-off"></div>
           <div class="controls">
-            <div class="power"><button class="play-pause">▶</button></div>
-            <div class="switch"><button>?</button></div>
+            <div class="power">
+              <button class="play-pause">
+                <span class="material-symbols-outlined"> mode_off_on </span>
+              </button>
+            </div>
+            <div class="middle-panel">
+              <img
+                src="./styles/images/anythingBoyIconNoAlpha.png"
+                alt="anything boy logo"
+              />
+              <p id="mute-text">MUTE</p>
+              <span id="mute-toggle" class="material-symbols-outlined">
+                toggle_on
+              </span>
+            </div>
+            <div class="switch">
+              <button>
+                <span class="material-symbols-outlined"> arrow_drop_up </span>
+              </button>
+            </div>
+            <div class="switch">
+              <button>
+                <span class="material-symbols-outlined"> arrow_drop_down </span>
+              </button>
+            </div>
           </div>
         </div>
       </aside>
