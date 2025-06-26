@@ -52,9 +52,10 @@ standby.addEventListener('click', () => {
     indicator.classList.add('indi-on');
     indicator.classList.remove('indi-off');
     let currentChannel = Math.floor(Math.random() * channels.length);
+    let trim = Math.floor(Math.random() * 120);
     channel.setAttribute(
       'src',
-      './styles/videos/channels/' + channels[currentChannel]
+      './styles/videos/channels/' + channels[currentChannel] + '#t=' + trim
     );
     channel.classList.remove('hide');
   } else {
