@@ -4,7 +4,12 @@ const indicator = document.querySelector('#indicator');
 const switcher = document.querySelector('.switch');
 let channel = document.querySelector('.channel');
 let muteText = document.querySelector('#mute-text');
-const muter = document.querySelector('#mute-toggle');
+const muter = document.querySelector('#mute');
+const muteIcon = document.querySelector('#mute-icon');
+let muteCheck = 1;
+let screenCheck = 0;
+let buttonCheck = 0;
+
 // const ytid = [
 //   '0XxNhQSj6_I',
 //   'nEhKFxeE9fM',
@@ -48,9 +53,28 @@ const channels = [
 
 // HIDE/UNHIDE VIDEO ON CLICK -----------
 standby.addEventListener('click', () => {
-  if (indicator.classList.contains('indi-off')) {
-    indicator.classList.add('indi-on');
+  screenToggle();
+  if (muteCheck == 1) {
+    return;
+  } else {
+    muteToggle();
+  }
+});
+
+// MUTE EVENT ------------------------
+muter.addEventListener('click', () => {
+  muteToggle();
+  buttonPress(muter);
+  setTimeout(() => {
+    buttonPress(muter);
+  }, 300);
+});
+
+function screenToggle() {
+  if (screenCheck == 0) {
+    screenCheck = 1;
     indicator.classList.remove('indi-off');
+    indicator.classList.add('indi-on');
     let currentChannel = Math.floor(Math.random() * channels.length);
     let trim = Math.floor(Math.random() * 120);
     channel.setAttribute(
@@ -58,23 +82,44 @@ standby.addEventListener('click', () => {
       './styles/videos/channels/' + channels[currentChannel] + '#t=' + trim
     );
     channel.classList.remove('hide');
+    buttonPress(standby);
+    setTimeout(() => {
+      buttonPress(standby);
+    }, 300);
   } else {
+    screenCheck = 0;
     indicator.classList.add('indi-off');
     indicator.classList.remove('indi-on');
     channel.classList.add('hide');
-    let currentChannel = Math.floor(Math.random() * channels.length);
     channel.setAttribute('src', '');
+    buttonPress(standby);
+    setTimeout(() => {
+      buttonPress(standby);
+    }, 300);
   }
-});
+}
 
-// MUTE ------------------------
-muter.addEventListener('click', () => {
-  console.log('mute clicked');
-  if (muter.innerText == 'toggle_on') {
+function muteToggle() {
+  if (muteCheck == 1) {
     channel.muted = false;
-    muter.innerText = 'toggle_off';
+    muteCheck = 0;
+    muteIcon.classList.add('hide');
   } else {
     channel.muted = true;
-    muter.innerText = 'toggle_on';
+    muteCheck = 1;
+    muteIcon.classList.remove('hide');
   }
-});
+}
+
+screenToggle();
+
+// BUTTON PRESS CSS FUNCTION?? -----------------
+function buttonPress(button) {
+  if (buttonCheck == 0) {
+    buttonCheck = 1;
+    button.classList.add('button-press');
+  } else {
+    buttonCheck = 0;
+    button.classList.remove('button-press');
+  }
+}

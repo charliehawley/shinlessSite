@@ -357,6 +357,13 @@ nav {
   border-radius: 10px;
   border: inset 20px #5d5d5d;
   overflow: hidden;
+  img {
+    width: 50px;
+    z-index: 2;
+    position: relative;
+    left: 7%;
+    top: -295%;
+  }
 }
 
 .crt {
@@ -385,16 +392,16 @@ nav {
   left: 0;
   background: radial-gradient(circle at 50%, #aaa3 5%, #000 100%);
   opacity: 0.85;
-  z-index: 3;
+  z-index: 4;
 }
 
 .channel {
-  width: 105%;
-  height: 105%;
+  width: 106%;
+  height: 106%;
   position: relative;
-  top: -202.5%;
-  left: -2.5%;
-  z-index: 2;
+  top: -203%;
+  left: -3%;
+  z-index: 1;
 }
 
 #indicator {
@@ -415,9 +422,8 @@ nav {
 .controls {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  /* margin-top: 30px; */
-  border: inset 5px #666;
-  border-radius: 10px;
+  border: inset 3px #666;
+  border-radius: 7px;
   height: 100px;
   width: 90%;
 
@@ -434,38 +440,13 @@ nav {
   display: flex;
   justify-content: center;
   align-items: center;
+  span {
+    font-size: 2rem;
+  }
 }
 
 .switch span {
   font-size: 4rem;
-}
-
-.middle-panel {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
-  width: 100%;
-  margin: auto;
-  img {
-    display: none;
-    height: 50%;
-    width: 50%;
-    box-shadow: -1px -1px 0 #000, 1px 1px 0 #fff;
-  }
-}
-
-#mute-text {
-  font-size: 1.4rem;
-  color: #202020;
-  text-shadow: -1px -1px 0 #000, 1px 1px 0 #fff;
-  margin-bottom: 0px;
-}
-
-#mute-toggle {
-  font-size: 3rem;
-  cursor: pointer;
 }
 
 button {
@@ -475,18 +456,27 @@ button {
   width: 100%;
   cursor: pointer;
 
-  background: radial-gradient(circle at 50%, #aaa2 5%, #474747 90%, #111c 100%);
+  background: radial-gradient(circle at 50%, #aaa 5%, #474747 90%, #111c 100%);
   font-size: 2rem;
   color: #fff;
   text-shadow: -1px -1px 0px #000, 1px 1px 0 #fff;
-  border: outset 2px #333a;
+  border: outset 4px #333;
   border-radius: 3px;
+
+  .span-center {
+    padding-top: 12%;
+  }
 }
 
 button:hover {
-  font-size: 1.95rem;
-  border: inset 2px #333a;
-  background: radial-gradient(circle at 50%, #aaa2 5%, #474747 90%, #111 100%);
+  span {
+    color: #ddd;
+  }
+}
+
+.button-press {
+  border: inset 4px #999;
+  background: radial-gradient(circle at 50%, #aaa 5%, #474747 80%, #313131 90%);
 }
 
 /*--------------- MEDIA QUERIES ---------------*/

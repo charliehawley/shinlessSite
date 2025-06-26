@@ -47,23 +47,27 @@
             <div class="crt"></div>
             <div class="glare"></div>
             <video class="channel" src="" autoplay muted loop></video>
+            <img
+              id="mute-icon"
+              src="./styles/images/muteCrtOn.png"
+              alt="mute icon"
+            />
           </div>
           <div id="indicator" class="indi-off"></div>
           <div class="controls">
             <div class="power">
               <button id="standby">
-                <span class="material-symbols-outlined"> mode_off_on </span>
+                <span class="material-symbols-outlined span-center">
+                  mode_off_on
+                </span>
               </button>
             </div>
-            <div class="middle-panel">
-              <img
-                src="./styles/images/anythingBoyIconNoAlpha.png"
-                alt="anything boy logo"
-              />
-              <p id="mute-text">MUTE</p>
-              <span id="mute-toggle" class="material-symbols-outlined">
-                toggle_on
-              </span>
+            <div class="mute">
+              <button id="mute">
+                <span class="material-symbols-outlined span-center">
+                  no_sound
+                </span>
+              </button>
             </div>
             <div class="switch">
               <button>
