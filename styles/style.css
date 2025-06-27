@@ -342,23 +342,32 @@ nav {
 }
 
 /* SKY */
+
 .sky-container {
   width: 100%;
   height: calc(100vh - var(--header-height));
   display: flex;
   flex-direction: column;
-  align-items: center;
+  /* align-items: center; */
+  /* align-items: start; */
   justify-content: center;
+  /* justify-content: start; */
+}
+
+#shinvision {
+  margin: 0 0 15px 5%;
+  width: 45%;
 }
 
 .screen {
+  margin: 0 5%;
   aspect-ratio: 16/9;
   width: 90%;
   border-radius: 10px;
   border: inset 20px #5d5d5d;
   overflow: hidden;
   img {
-    width: 50px;
+    width: 35px;
     z-index: 2;
     position: relative;
     left: 7%;
@@ -372,15 +381,16 @@ nav {
   opacity: 0.8;
   background: linear-gradient(
     0deg,
-    #00cf0022 0%,
-    #0000cf22 50%,
-    #cf000008 100%
+    #00cf0096 0%,
+    #0000cf88 50%,
+    #cf00007a 100%
   );
-  background-size: 5px 5px;
+  background-size: 2px 2px;
   position: relative;
   top: 0;
   left: 0;
   z-index: 3;
+  mix-blend-mode: difference;
 }
 
 .glare {
@@ -420,12 +430,14 @@ nav {
 }
 
 .controls {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  border: inset 3px #666;
-  border-radius: 7px;
+  margin: 0 5%;
   height: 100px;
   width: 90%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  border: inset 3px #666;
+  border-radius: 7px;
 
   background-color: #e5e5f7;
   opacity: 0.8;

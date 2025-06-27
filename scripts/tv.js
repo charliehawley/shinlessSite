@@ -67,7 +67,7 @@ muter.addEventListener('click', () => {
   buttonPress(muter);
   setTimeout(() => {
     buttonPress(muter);
-  }, 300);
+  }, 150);
 });
 
 function screenToggle() {
@@ -85,7 +85,7 @@ function screenToggle() {
     buttonPress(standby);
     setTimeout(() => {
       buttonPress(standby);
-    }, 300);
+    }, 150);
   } else {
     screenCheck = 0;
     indicator.classList.add('indi-off');
@@ -95,7 +95,7 @@ function screenToggle() {
     buttonPress(standby);
     setTimeout(() => {
       buttonPress(standby);
-    }, 300);
+    }, 150);
   }
 }
 
