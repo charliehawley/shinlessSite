@@ -1,11 +1,11 @@
 const tv = document.querySelector('.screen');
 const standby = document.querySelector('#standby');
 const indicator = document.querySelector('#indicator');
-const switcher = document.querySelector('.switch');
 let channel = document.querySelector('.channel');
 let muteText = document.querySelector('#mute-text');
 const muter = document.querySelector('#mute');
 const muteIcon = document.querySelector('#mute-icon');
+const switcher = document.querySelector('#switch');
 let muteCheck = 1;
 let screenCheck = 0;
 let buttonCheck = 0;
@@ -70,6 +70,16 @@ muter.addEventListener('click', () => {
   }, 150);
 });
 
+// SWITCH EVENT ------------------------
+switcher.addEventListener('click', () => {
+  buttonPress(switcher);
+  setTimeout(() => {
+    buttonPress(switcher);
+  }, 150);
+  switchChannel();
+});
+
+// FUNCTIONS -------------------------
 function screenToggle() {
   if (screenCheck == 0) {
     screenCheck = 1;
@@ -111,9 +121,15 @@ function muteToggle() {
   }
 }
 
-screenToggle();
+function switchChannel(button) {
+  let currentChannel = Math.floor(Math.random() * channels.length);
+  let trim = Math.floor(Math.random() * 120);
+  channel.setAttribute(
+    'src',
+    './styles/videos/channels/' + channels[currentChannel] + '#t=' + trim
+  );
+}
 
-// BUTTON PRESS CSS FUNCTION?? -----------------
 function buttonPress(button) {
   if (buttonCheck == 0) {
     buttonCheck = 1;
@@ -123,3 +139,5 @@ function buttonPress(button) {
     button.classList.remove('button-press');
   }
 }
+
+screenToggle();

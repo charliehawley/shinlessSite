@@ -432,7 +432,7 @@ nav {
   height: 10vh;
   width: 90%;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
   gap: 10px;
   border: inset 3px #666;
   border-radius: 7px;
@@ -444,20 +444,26 @@ nav {
 }
 
 .power,
-.mute {
-  max-height: 90%;
+.mute,
+.switch {
+  button {
+    max-height: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
   span {
-    margin-top: 10px;
+    /* margin-top: 10px; */
     font-size: 45px;
   }
 }
 
-.switch {
+/* .switch {
   max-height: 90%;
   span {
     font-size: 4rem;
   }
-}
+} */
 
 button {
   font-family: 'made outer sans', serif;
@@ -559,18 +565,19 @@ button:hover {
   }
 
   .power,
-  .mute {
+  .mute,
+  .switch {
     span {
       font-size: 35px;
     }
   }
 
-  .switch {
+  /* .switch {
     span {
       padding-top: 5%;
       font-size: 2.5rem;
     }
-  }
+  } */
 }
 
 @media (max-width: 768px) {
