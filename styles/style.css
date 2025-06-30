@@ -370,6 +370,7 @@ nav {
     left: 7%;
     top: -295%;
   }
+  background: #111;
 }
 
 .crt {
@@ -438,7 +439,6 @@ nav {
   border-radius: 7px;
 
   background-color: #e5e5f7;
-  opacity: 0.8;
   background-image: linear-gradient(0deg, #c5c5c7 50%, #999999 50%);
   background-size: 3px 3px;
 }
@@ -453,21 +453,13 @@ nav {
     justify-content: center;
   }
   span {
-    /* margin-top: 10px; */
     font-size: 45px;
   }
 }
 
-/* .switch {
-  max-height: 90%;
-  span {
-    font-size: 4rem;
-  }
-} */
-
 button {
   font-family: 'made outer sans', serif;
-  margin: 5% 0;
+  margin: 4% 0;
   height: 80%;
   width: 100%;
   cursor: pointer;
@@ -491,30 +483,16 @@ button:hover {
   background: radial-gradient(circle at 50%, #aaa 5%, #474747 80%, #313131 90%);
 }
 
-/* .channel-list {
-  margin: 2%;
-  height: 25vh;
-  grid-column-start: 1;
-  grid-column-end: 5;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  overflow: scroll;
-  overflow-y: scroll;
-  -ms-overflow-style: none;
-  scrollbar-width: none;
-
-  color: #1900ff;
-  background-color: #000;
-  border: inset 3px #999;
-
-  ul li {
-    overflow-x: hidden;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    margin: 10px;
-  }
-} */
-
 /*--------------- MEDIA QUERIES ---------------*/
+
+@media (min-width: 1400px) {
+  #shinvision {
+    width: 30%;
+  }
+  .sky-container {
+    width: 80%;
+  }
+}
 @media (max-width: 1200px) {
   nav {
     justify-content: center;
@@ -571,13 +549,6 @@ button:hover {
       font-size: 35px;
     }
   }
-
-  /* .switch {
-    span {
-      padding-top: 5%;
-      font-size: 2.5rem;
-    }
-  } */
 }
 
 @media (max-width: 768px) {
