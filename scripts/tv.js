@@ -10,6 +10,8 @@ let muteCheck = 1;
 let screenCheck = 0;
 let buttonCheck = 0;
 
+const buttonOutTimeout = 200;
+
 // const ytid = [
 //   '0XxNhQSj6_I',
 //   'nEhKFxeE9fM',
@@ -29,6 +31,12 @@ let buttonCheck = 0;
 //   'EXqOYohC39A',
 //   'TtXuT02jfdU',
 // ];
+
+const sounds = [
+  '../styles/sounds/btn1.mp3',
+  '../styles/sounds/btn2.mp3',
+  '../styles/sounds/btn3.mp3',
+];
 
 const channels = [
   'peacebloom.mp4',
@@ -63,19 +71,21 @@ standby.addEventListener('click', () => {
 
 // MUTE EVENT ------------------------
 muter.addEventListener('click', () => {
+  new Audio(sounds[Math.floor(Math.random() * 3)]).play();
   muteToggle();
   buttonPress(muter);
   setTimeout(() => {
     buttonPress(muter);
-  }, 150);
+  }, buttonOutTimeout);
 });
 
 // SWITCH EVENT ------------------------
 switcher.addEventListener('click', () => {
+  new Audio(sounds[Math.floor(Math.random() * 3)]).play();
   buttonPress(switcher);
   setTimeout(() => {
     buttonPress(switcher);
-  }, 150);
+  }, buttonOutTimeout);
   switchChannel();
 });
 
@@ -83,29 +93,35 @@ switcher.addEventListener('click', () => {
 function screenToggle() {
   if (screenCheck == 0) {
     screenCheck = 1;
-    indicator.classList.remove('indi-off');
-    indicator.classList.add('indi-on');
-    let currentChannel = Math.floor(Math.random() * channels.length);
-    let trim = Math.floor(Math.random() * 120);
-    channel.setAttribute(
-      'src',
-      './styles/videos/channels/' + channels[currentChannel] + '#t=' + trim
-    );
-    channel.classList.remove('hide');
+    new Audio('../styles/sounds/tv-on.mp3').play();
+    setTimeout(() => {
+      indicator.classList.remove('indi-off');
+      indicator.classList.add('indi-on');
+    }, 750);
     buttonPress(standby);
     setTimeout(() => {
       buttonPress(standby);
-    }, 150);
+    }, buttonOutTimeout);
+    setTimeout(() => {
+      let currentChannel = Math.floor(Math.random() * channels.length);
+      let trim = Math.floor(Math.random() * 120);
+      channel.setAttribute(
+        'src',
+        './styles/videos/channels/' + channels[currentChannel] + '#t=' + trim
+      );
+      channel.classList.remove('hide');
+    }, 750);
   } else {
     screenCheck = 0;
     indicator.classList.add('indi-off');
     indicator.classList.remove('indi-on');
     channel.classList.add('hide');
     channel.setAttribute('src', '');
+    new Audio('../styles/sounds/tv-off.mp3').play();
     buttonPress(standby);
     setTimeout(() => {
       buttonPress(standby);
-    }, 150);
+    }, buttonOutTimeout);
   }
 }
 
