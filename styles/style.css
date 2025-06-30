@@ -348,10 +348,7 @@ nav {
   height: calc(100vh - var(--header-height));
   display: flex;
   flex-direction: column;
-  /* align-items: center; */
-  /* align-items: start; */
   justify-content: center;
-  /* justify-content: start; */
 }
 
 #shinvision {
@@ -382,7 +379,7 @@ nav {
   background: linear-gradient(
     0deg,
     #00cf0096 0%,
-    #0000cf88 50%,
+    #0000cfa4 50%,
     #cf00007a 100%
   );
   background-size: 2px 2px;
@@ -431,11 +428,12 @@ nav {
 
 .controls {
   margin: 0 5%;
-  height: 100px;
+  padding: 0 10px;
+  height: 10vh;
   width: 90%;
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(2, 1fr);
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 10px;
   border: inset 3px #666;
   border-radius: 7px;
 
@@ -445,25 +443,25 @@ nav {
   background-size: 3px 3px;
 }
 
-.switch,
 .power,
 .mute {
-  max-height: 90px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  max-height: 90%;
   span {
-    font-size: 2rem;
+    margin-top: 10px;
+    font-size: 45px;
   }
 }
 
-.switch span {
-  font-size: 4rem;
+.switch {
+  max-height: 90%;
+  span {
+    font-size: 4rem;
+  }
 }
 
 button {
   font-family: 'made outer sans', serif;
-  margin: 5%;
+  margin: 5% 0;
   height: 80%;
   width: 100%;
   cursor: pointer;
@@ -474,10 +472,6 @@ button {
   text-shadow: -1px -1px 0px #000, 1px 1px 0 #fff;
   border: outset 4px #333;
   border-radius: 3px;
-
-  .span-center {
-    padding-top: 12%;
-  }
 }
 
 button:hover {
@@ -490,6 +484,29 @@ button:hover {
   border: inset 4px #999;
   background: radial-gradient(circle at 50%, #aaa 5%, #474747 80%, #313131 90%);
 }
+
+/* .channel-list {
+  margin: 2%;
+  height: 25vh;
+  grid-column-start: 1;
+  grid-column-end: 5;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  overflow: scroll;
+  overflow-y: scroll;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+
+  color: #1900ff;
+  background-color: #000;
+  border: inset 3px #999;
+
+  ul li {
+    overflow-x: hidden;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: 10px;
+  }
+} */
 
 /*--------------- MEDIA QUERIES ---------------*/
 @media (max-width: 1200px) {
@@ -513,6 +530,16 @@ button:hover {
   .gallery {
     grid-template-rows: repeat(4, 240px);
   }
+
+  .power,
+  .mute,
+  .switch {
+    max-height: 100%;
+  }
+
+  #shinvision {
+    width: 60%;
+  }
 }
 
 @media (max-width: 1015px) {
@@ -524,6 +551,24 @@ button:hover {
     img,
     video {
       width: var(--thumbs-small);
+    }
+  }
+
+  .controls {
+    height: 8vh;
+  }
+
+  .power,
+  .mute {
+    span {
+      font-size: 35px;
+    }
+  }
+
+  .switch {
+    span {
+      padding-top: 5%;
+      font-size: 2.5rem;
     }
   }
 }
@@ -667,5 +712,9 @@ button:hover {
   .contact-list p,
   .contact-list p a {
     font-size: 1.5rem;
+  }
+
+  #shinvision {
+    width: 90%;
   }
 }
