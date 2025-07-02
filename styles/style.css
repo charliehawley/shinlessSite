@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Familjen+Grotesk:ital,wght@0,400..700;1,400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Familjen+Grotesk:ital,wght@0,400..700;1,400..700&family=Micro+5&display=swap');
 
 @font-face {
   font-family: 'made outer sans';
@@ -432,7 +432,7 @@ nav {
 }
 
 .controls {
-  margin: 0 5%;
+  margin: 0 5% 1% 5%;
   padding: 0 10px;
   height: 10vh;
   width: 90%;
@@ -443,8 +443,41 @@ nav {
   border-radius: 7px;
 
   background-color: #e5e5f7;
-  background-image: linear-gradient(0deg, #c5c5c7 50%, #999999 50%);
+  background-image: linear-gradient(0deg, #363636 0%, #999999 100%);
   background-size: 3px 3px;
+}
+
+.led {
+  margin-bottom: 2%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.ch-name,
+.ch-details {
+  margin: 5%;
+  max-height: 90%;
+  background-image: linear-gradient(90deg, #00201f 0%, #000000 100%);
+  background-size: 2px 2px;
+  border: inset 2px #444;
+  border-radius: 3px;
+  /* box-shadow: inset 0px 0px 40px 4px #00201f; */
+  box-shadow: inset 0px 0px 4px 2px #446e6e;
+  overflow: hidden;
+
+  display: flex;
+  align-items: center;
+
+  p {
+    margin: auto 8%;
+    font-family: 'Micro 5';
+    color: #00fff7;
+    text-shadow: 0px 0px 5px #446e6e;
+  }
+}
+
+.ch-details-text {
+  white-space: nowrap;
 }
 
 .power,
@@ -486,16 +519,6 @@ button:hover {
   border: inset 4px #999;
   background: radial-gradient(circle at 50%, #aaa 5%, #474747 80%, #313131 90%);
 }
-
-/* .standby {
-  margin: 15% auto;
-  height: 50px;
-  width: 50px;
-  border-radius: 50%;
-  background: #444;
-  box-shadow: inset 16px 16px 18px #2a2a2a, inset -16px -16px 18px #565656;
-  border: inset 1px #333;
-} */
 
 /*--------------- MEDIA QUERIES ---------------*/
 
