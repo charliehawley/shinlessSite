@@ -388,9 +388,9 @@ nav {
   opacity: 0.8;
   background: linear-gradient(
     0deg,
-    #00cf00cc 0%,
-    #0000cfaf 50%,
-    #cf00005d 100%
+    #00cf0086 0%,
+    #0000cf6e 50%,
+    #cf000031 100%
   );
   background-size: 2px 2px;
   position: relative;
@@ -451,7 +451,7 @@ nav {
   border-radius: 7px;
 
   background-color: #e5e5f7;
-  background-image: linear-gradient(0deg, #363636 0%, #999999 100%);
+  background-image: linear-gradient(0deg, #363636 0%, #727272 100%);
   background-size: 3px 3px;
 }
 
@@ -473,6 +473,7 @@ nav {
   /* box-shadow: inset 0px 0px 40px 4px #00201f; */
   box-shadow: inset 0px 0px 4px 2px #446e6e;
   overflow: hidden;
+  white-space: nowrap;
 
   display: flex;
   align-items: center;
@@ -506,7 +507,6 @@ nav {
 }
 
 .ch-details-text {
-  white-space: nowrap;
   animation: marquee 10s linear 2s infinite;
 }
 
@@ -540,8 +540,8 @@ button {
 
   background: radial-gradient(circle at 50%, #aaa 5%, #474747 90%, #111c 100%);
   font-size: 2rem;
-  color: #fff;
-  text-shadow: -1px -1px 0px #000, 1px 1px 0 #fff;
+  color: #222;
+  text-shadow: -1px -1px 2px #fff, 1px 1px 2px #474747;
   border: outset 4px #333;
   border-radius: 3px;
 }
@@ -755,6 +755,13 @@ button:hover {
       width: 90%;
       margin-top: 30px;
       font-size: 1.2rem;
+    }
+  }
+
+  .ch-name,
+  .ch-details {
+    p {
+      margin-bottom: auto;
     }
   }
 }
