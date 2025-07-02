@@ -352,7 +352,7 @@ nav {
 
 /* SKY */
 .sky-container {
-  width: 100%;
+  max-width: 80%;
   height: calc(100vh - var(--header-height));
   display: flex;
   flex-direction: column;
@@ -566,11 +566,11 @@ button:hover {
 
 @media (min-width: 1400px) {
   #shinvision {
-    width: 30%;
+    width: 500px;
   }
 
   .sky-container {
-    width: 80%;
+    max-width: 800px;
   }
 }
 @media (max-width: 1200px) {
@@ -789,5 +789,13 @@ button:hover {
 
   #shinvision {
     width: 90%;
+  }
+
+  .sky-container,
+  .screen,
+  .controls {
+    max-width: 98%;
+    margin: 1%;
+    width: 100%;
   }
 }
