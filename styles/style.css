@@ -463,6 +463,7 @@ nav {
 
 .ch-name,
 .ch-details {
+  position: relative;
   margin: 5%;
   max-height: 90%;
   background-image: linear-gradient(90deg, #00201f 0%, #000000 100%);
@@ -475,6 +476,7 @@ nav {
 
   display: flex;
   align-items: center;
+  gap: 20px;
 
   p {
     margin: auto 8%;
@@ -487,16 +489,31 @@ nav {
 
 @keyframes marquee {
   from {
-    transform: translateX(0);
+    transform: translateX(0%);
   }
   to {
-    transform: translateX(-60%);
+    transform: translateX(calc(-100% - 20px));
+  }
+}
+
+@keyframes marquee-clone {
+  from {
+    transform: translateX(calc(100% + 20px));
+  }
+  to {
+    transform: translateX(0);
   }
 }
 
 .ch-details-text {
   white-space: nowrap;
-  animation: marquee 10s linear 3s infinite;
+  animation: marquee 10s linear 2s infinite;
+}
+
+.clone {
+  position: absolute;
+  left: 0;
+  animation: marquee-clone 10s linear 2s infinite;
 }
 
 .power,
