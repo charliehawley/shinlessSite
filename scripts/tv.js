@@ -12,6 +12,7 @@ let buttonCheck = 0;
 const chName = document.getElementById('ch-name');
 const chDetails = document.getElementById('ch-details');
 const chClone = document.getElementById('ch-details-clone');
+const chLink = document.getElementById('ch-details-link');
 
 const buttonOutTimeout = 200;
 
@@ -48,7 +49,7 @@ const channels = [
     artist: 'Dear Earth',
     url: 'attackedTheChurch.mp4',
     channel: '256 Partyland',
-    ytUrl: 'hZA3jw6UKv48',
+    ytUrl: 'Hiiq9S0aW1w',
   },
   {
     title: 'Blue Room',
@@ -205,6 +206,10 @@ function screenToggle() {
       chDetails.innerText =
         currentChannel.artist + ' - ' + currentChannel.title;
       chClone.innerText = currentChannel.artist + ' - ' + currentChannel.title;
+      chLink.setAttribute(
+        'href',
+        'https://www.youtube.com/watch?v=' + currentChannel.ytUrl
+      );
       channel.classList.remove('hide');
     }, 750);
   } else {
@@ -221,6 +226,7 @@ function screenToggle() {
     chName.innerText = '';
     chDetails.innerText = '';
     chClone.innerText = '';
+    chLink.setAttribute('href', '');
   }
 }
 
@@ -246,6 +252,10 @@ function switchChannel(button) {
   chName.innerText = currentChannel.channel;
   chDetails.innerText = currentChannel.artist + ' - ' + currentChannel.title;
   chClone.innerText = currentChannel.artist + ' - ' + currentChannel.title;
+  chLink.setAttribute(
+    'href',
+    'https://www.youtube.com/watch?v=' + currentChannel.ytUrl
+  );
 }
 
 function buttonPress(button) {
