@@ -383,6 +383,7 @@ nav {
 }
 
 .crt {
+  /* display: none; */
   width: 100%;
   height: 100%;
   opacity: 0.8;
@@ -401,6 +402,7 @@ nav {
 }
 
 .glare {
+  /* display: none; */
   width: 100%;
   height: 100%;
   position: relative;
