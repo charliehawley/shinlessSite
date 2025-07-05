@@ -82,7 +82,7 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  border-bottom: solid 1px #000;
+  /* border-bottom: solid 1px #000; */
 }
 
 .head-left {
@@ -164,7 +164,7 @@ main {
   display: none;
 }
 .flex-right:last-child {
-  padding-bottom: 100px;
+  padding-bottom: 200px;
 }
 
 .spaced-heading {
@@ -552,9 +552,7 @@ button {
 }
 
 button:hover {
-  span {
-    color: #ddd;
-  }
+  border: outset 4px #111;
 }
 
 .button-press {
