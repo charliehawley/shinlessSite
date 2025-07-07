@@ -163,7 +163,7 @@ standby.addEventListener('click', () => {
 
 // MUTE EVENT ------------------------
 muter.addEventListener('click', () => {
-  new Audio(sounds[Math.floor(Math.random() * 3)]).play();
+  // new Audio(sounds[Math.floor(Math.random() * 3)]).play();
   muteToggle();
   buttonPress(muter);
   setTimeout(() => {
@@ -173,7 +173,7 @@ muter.addEventListener('click', () => {
 
 // SWITCH EVENT ------------------------
 switcher.addEventListener('click', () => {
-  new Audio(sounds[Math.floor(Math.random() * 3)]).play();
+  // new Audio(sounds[Math.floor(Math.random() * 3)]).play();
   buttonPress(switcher);
   setTimeout(() => {
     buttonPress(switcher);
@@ -185,11 +185,9 @@ switcher.addEventListener('click', () => {
 function screenToggle() {
   if (screenCheck == 0) {
     screenCheck = 1;
-    new Audio('../styles/sounds/tv-on.mp3').play();
-    setTimeout(() => {
-      indicator.classList.remove('indi-off');
-      indicator.classList.add('indi-on');
-    }, 750);
+    // new Audio('../styles/sounds/tv-on.mp3').play();
+    indicator.classList.remove('indi-off');
+    indicator.classList.add('indi-on');
     buttonPress(standby);
     setTimeout(() => {
       buttonPress(standby);
@@ -218,7 +216,7 @@ function screenToggle() {
     indicator.classList.remove('indi-on');
     channel.classList.add('hide');
     channel.setAttribute('src', '');
-    new Audio('../styles/sounds/tv-off.mp3').play();
+    // new Audio('../styles/sounds/tv-off.mp3').play();
     buttonPress(standby);
     setTimeout(() => {
       buttonPress(standby);
