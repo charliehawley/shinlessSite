@@ -587,11 +587,15 @@ button:hover {
 #cardLeft {
   left: -100%;
   background-color: green;
+  transform: rotate(-50deg);
+  transition: ease-out 90ms;
 }
 
 #cardRight {
-  left: 100%;
+  left: 120%;
   background-color: yellow;
+  transform: rotate(50deg);
+  transition: ease-out 90ms;
 }
 
 /*--------------- MEDIA QUERIES ---------------*/

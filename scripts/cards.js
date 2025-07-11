@@ -37,12 +37,14 @@ window.onload = function () {
       cCard.style.left = 120 + '%';
       cCard.style.transform = 'rotate(' + centerOrigin / 10 + 'deg)';
       lCard.style.left = 15 + '%';
+      lCard.style.transform = 'rotate(0deg)';
       // swipe left
     } else if (cCenter < xBoundL) {
       console.log('left');
       cCard.style.left = -100 + '%';
       cCard.style.transform = 'rotate(' + centerOrigin / 10 + 'deg)';
       rCard.style.left = 15 + '%';
+      rCard.style.transform = 'rotate(0deg)';
       // snap back
     } else {
       console.log('snapped');
