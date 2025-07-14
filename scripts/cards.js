@@ -2,6 +2,37 @@ const cCard = document.getElementById('cardCenter');
 const lCard = document.getElementById('cardLeft');
 const rCard = document.getElementById('cardRight');
 
+const thumbs = [
+  {
+    title: 'nerve',
+    image: './styles/images/music-thumbs/nerve.png',
+  },
+  {
+    title: 'symbiosis',
+    image: './styles/images/music-thumbs/symbiosis.png',
+  },
+  {
+    title: 'eucharis',
+    image: './styles/images/music-thumbs/eucharis.png',
+  },
+];
+
+let cIndex = Math.floor(Math.random() * thumbs.length);
+let lIndex = cIndex - 1;
+if (lIndex < 0) {
+  lIndex = thumbs.length - 1;
+}
+let rIndex = cIndex + 1;
+if (rIndex >= thumbs.length) {
+  rIndex = 0;
+}
+const cardIndexes = [lIndex, cIndex, rIndex];
+console.log(cardIndexes);
+
+lCard.firstElementChild.setAttribute('src', thumbs[lIndex].image);
+cCard.firstElementChild.setAttribute('src', thumbs[cIndex].image);
+rCard.firstElementChild.setAttribute('src', thumbs[rIndex].image);
+
 window.onload = function () {
   let offsetX = 0;
   let isSwiping = false;
@@ -77,9 +108,29 @@ function swapCards(direction) {
     toggleTrans(lCard);
     toggleTrans(rCard);
 
-    const temp = cCard.innerHTML;
-    cCard.innerHTML = lCard.innerHTML;
-    lCard.innerHTML = temp;
+    cardIndexes[0] -= 1;
+    cardIndexes[1] -= 1;
+    cardIndexes[2] -= 1;
+
+    for (let i = 0; i < cardIndexes.length; i++) {
+      if (cardIndexes[i] == thumbs.length) {
+        cardIndexes[i] = 0;
+      } else if (cardIndexes[i] < 0) {
+        cardIndexes[i] = thumbs.length - 1;
+      } else {
+        continue;
+      }
+    }
+
+    console.log(cardIndexes, thumbs.length, lIndex, cIndex, rIndex);
+
+    lCard.firstElementChild.setAttribute('src', thumbs[lIndex].image);
+    cCard.firstElementChild.setAttribute('src', thumbs[cIndex].image);
+    rCard.firstElementChild.setAttribute('src', thumbs[rIndex].image);
+
+    // const temp = cCard.innerHTML;
+    // cCard.innerHTML = lCard.innerHTML;
+    // lCard.innerHTML = temp;
 
     cCard.style.left = '15%';
     cCard.style.transform = 'rotate(0deg)';
@@ -96,9 +147,27 @@ function swapCards(direction) {
     toggleTrans(rCard);
     toggleTrans(lCard);
 
-    const temp = cCard.innerHTML;
-    cCard.innerHTML = rCard.innerHTML;
-    rCard.innerHTML = temp;
+    cardIndexes[0] += 1;
+    cardIndexes[1] += 1;
+    cardIndexes[2] += 1;
+
+    for (let i = 0; i < cardIndexes.length; i++) {
+      if (cardIndexes[i] >= thumbs.length) {
+        cardIndexes[i] = 0;
+      } else if (cardIndexes[i] < 0) {
+        cardIndexes[i] = thumbs.length - 1;
+      } else {
+        continue;
+      }
+    }
+
+    lCard.firstElementChild.setAttribute('src', thumbs[lIndex].image);
+    cCard.firstElementChild.setAttribute('src', thumbs[cIndex].image);
+    rCard.firstElementChild.setAttribute('src', thumbs[rIndex].image);
+
+    // const temp = cCard.innerHTML;
+    // cCard.innerHTML = rCard.innerHTML;
+    // rCard.innerHTML = temp;
 
     cCard.style.left = '15%';
     cCard.style.transform = 'rotate(0deg)';
