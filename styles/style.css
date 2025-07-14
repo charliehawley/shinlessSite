@@ -565,7 +565,7 @@ button:hover {
 /* ----------------- CARDS ---------------------  */
 .card-container {
   width: 100vw;
-  height: 60vh;
+  height: 80vh;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -574,28 +574,38 @@ button:hover {
   justify-content: center;
   transform: translate(-50%, -50%);
   overflow: hidden;
-  background-color: red;
+  /* background-color: red; */
 }
 
 .card {
   position: absolute;
   background-color: blue;
-  height: 90%;
+  height: 70%;
   width: 70%;
 }
+
+.trans {
+  transition: left 0.1s ease-out, transform 0.1s ease-out;
+}
+
+/* #cardCenter,
+#cardLeft,
+#cardRight {
+  transition: left 0.2s ease-out, transform 0.2s ease-out;
+} */
 
 #cardLeft {
   left: -100%;
   background-color: green;
   transform: rotate(-50deg);
-  transition: ease-out 90ms;
+  /* transition: ease-out 80ms; */
 }
 
 #cardRight {
   left: 120%;
   background-color: yellow;
   transform: rotate(50deg);
-  transition: ease-out 90ms;
+  /* transition: ease-out 80ms; */
 }
 
 /*--------------- MEDIA QUERIES ---------------*/
