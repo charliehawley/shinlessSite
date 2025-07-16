@@ -15,6 +15,10 @@ const thumbs = [
     title: 'eucharis',
     image: './styles/images/music-thumbs/eucharis.png',
   },
+  {
+    title: 'blue-room',
+    image: './styles/images/music-thumbs/blue-room.png',
+  },
 ];
 
 let cIndex = Math.floor(Math.random() * thumbs.length);
@@ -26,7 +30,7 @@ let rIndex = cIndex + 1;
 if (rIndex >= thumbs.length) {
   rIndex = 0;
 }
-const cardIndexes = [lIndex, cIndex, rIndex];
+let cardIndexes = [lIndex, cIndex, rIndex];
 console.log(cardIndexes);
 
 lCard.firstElementChild.setAttribute('src', thumbs[lIndex].image);
@@ -122,7 +126,11 @@ function swapCards(direction) {
       }
     }
 
-    console.log(cardIndexes, thumbs.length, lIndex, cIndex, rIndex);
+    lIndex = cardIndexes[0];
+    cIndex = cardIndexes[1];
+    rIndex = cardIndexes[2];
+
+    console.log(cardIndexes, lIndex, cIndex, rIndex);
 
     lCard.firstElementChild.setAttribute('src', thumbs[lIndex].image);
     cCard.firstElementChild.setAttribute('src', thumbs[cIndex].image);
@@ -160,6 +168,10 @@ function swapCards(direction) {
         continue;
       }
     }
+
+    lIndex = cardIndexes[0];
+    cIndex = cardIndexes[1];
+    rIndex = cardIndexes[2];
 
     lCard.firstElementChild.setAttribute('src', thumbs[lIndex].image);
     cCard.firstElementChild.setAttribute('src', thumbs[cIndex].image);
