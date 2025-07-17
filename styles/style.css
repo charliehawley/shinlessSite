@@ -565,7 +565,7 @@ button:hover {
 /* ----------------- CARDS ---------------------  */
 .card-container {
   width: 100vw;
-  height: 80vh;
+  height: 70vh;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -579,12 +579,15 @@ button:hover {
 
 .card {
   position: absolute;
-  background-color: blue;
-  height: 70%;
-  width: 70%;
+  background-color: #111;
+  width: 85%;
+  aspect-ratio: 1/1;
+  overflow: hidden;
+  border: outset 1px #888;
+  border-radius: 10px;
+  box-shadow: 2px 2px 15px #111;
   img {
-    margin: 5%;
-    width: 90%;
+    width: 100%;
   }
 }
 
@@ -593,15 +596,29 @@ button:hover {
 }
 
 #cardLeft {
-  left: -100%;
-  background-color: green;
+  left: -120%;
   transform: rotate(-50deg);
 }
 
 #cardRight {
-  left: 120%;
-  background-color: yellow;
+  left: 150%;
   transform: rotate(50deg);
+}
+
+.card-details {
+  position: absolute;
+  top: 75%;
+}
+
+#artist {
+  padding-bottom: 10px;
+}
+
+#shindex {
+  width: 90vw;
+  position: absolute;
+  top: 17%;
+  mix-blend-mode: exclusion;
 }
 
 /*--------------- MEDIA QUERIES ---------------*/
@@ -687,13 +704,13 @@ button:hover {
   }
 
   .head-right {
-    margin-right: 2px;
+    margin-right: 10px;
 
     ul li {
       margin: 5px;
 
       a {
-        font-size: 0.9rem;
+        font-size: 0.8rem;
       }
     }
   }
@@ -736,7 +753,7 @@ button:hover {
       height: var(--header-2-height);
       width: 100vw;
       background-color: #333;
-      border-bottom: solid 1px #000;
+      border-bottom: solid 1px #2b2a2a;
     }
 
     ul {
@@ -744,7 +761,7 @@ button:hover {
 
       li {
         padding: 3vw;
-        font-size: 1.1rem;
+        font-size: 1rem;
         margin: 5px;
       }
     }

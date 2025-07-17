@@ -2,22 +2,16 @@ const cCard = document.getElementById('cardCenter');
 const lCard = document.getElementById('cardLeft');
 const rCard = document.getElementById('cardRight');
 
+let artist = document.getElementById('artist');
+let title = document.getElementById('title');
+let detailLink = document.getElementById('detailLink');
+
 const thumbs = [
   {
-    title: 'nerve',
-    image: './styles/images/music-thumbs/nerve.png',
-  },
-  {
-    title: 'symbiosis',
-    image: './styles/images/music-thumbs/symbiosis.png',
-  },
-  {
-    title: 'eucharis',
-    image: './styles/images/music-thumbs/eucharis.png',
-  },
-  {
-    title: 'blue-room',
-    image: './styles/images/music-thumbs/blue-room.png',
+    title: 'Anode',
+    image: './styles/images/music-thumbs/anode.png',
+    artist: 'K. Leimer',
+    url: 'gMJ1Aj4odh4',
   },
 ];
 
@@ -36,6 +30,9 @@ console.log(cardIndexes);
 lCard.firstElementChild.setAttribute('src', thumbs[lIndex].image);
 cCard.firstElementChild.setAttribute('src', thumbs[cIndex].image);
 rCard.firstElementChild.setAttribute('src', thumbs[rIndex].image);
+artist.innerText = thumbs[cIndex].artist;
+title.innerText = thumbs[cIndex].title;
+detailLink.setAttribute('href', 'https://youtu.be/' + thumbs[cIndex].url);
 
 window.onload = function () {
   let offsetX = 0;
@@ -71,8 +68,8 @@ window.onload = function () {
     const cardCenter = cCenter;
     const centerOrigin = cardCenter - screenCenter;
 
-    const xBoundL = screenCenter - screenCenter * 0.7;
-    const xBoundR = screenCenter + screenCenter * 0.7;
+    const xBoundL = screenCenter - screenCenter * 0.6;
+    const xBoundR = screenCenter + screenCenter * 0.6;
 
     isSwiping = true;
 
@@ -80,7 +77,7 @@ window.onload = function () {
       cCard.style.left = '120%';
       cCard.style.transform = `rotate(${centerOrigin / 10}deg)`;
 
-      lCard.style.left = '15%';
+      lCard.style.left = 15 / 2 + '%';
       lCard.style.transform = 'rotate(0deg)';
 
       setTimeout(() => {
@@ -91,7 +88,7 @@ window.onload = function () {
       cCard.style.left = '-100%';
       cCard.style.transform = `rotate(${centerOrigin / 10}deg)`;
 
-      rCard.style.left = '15%';
+      rCard.style.left = 15 / 2 + '%';
       rCard.style.transform = 'rotate(0deg)';
 
       setTimeout(() => {
@@ -99,7 +96,7 @@ window.onload = function () {
         isSwiping = false;
       }, 200);
     } else {
-      cCard.style.left = '15%';
+      cCard.style.left = 15 / 2 + '%';
       cCard.style.transform = 'rotate(0deg)';
       isSwiping = false;
     }
@@ -136,14 +133,14 @@ function swapCards(direction) {
     cCard.firstElementChild.setAttribute('src', thumbs[cIndex].image);
     rCard.firstElementChild.setAttribute('src', thumbs[rIndex].image);
 
-    // const temp = cCard.innerHTML;
-    // cCard.innerHTML = lCard.innerHTML;
-    // lCard.innerHTML = temp;
+    detailLink.setAttribute('href', 'https://youtu.be/' + thumbs[cIndex].url);
 
-    cCard.style.left = '15%';
+    cCard.style.left = 15 / 2 + '%';
     cCard.style.transform = 'rotate(0deg)';
-    rCard.style.left = '120%';
-    lCard.style.left = '-100%';
+    rCard.style.left = '150%';
+    rCard.style.transform = 'rotate(50deg)';
+    lCard.style.left = '-150%';
+    lCard.style.transform = 'rotate(-50deg)';
 
     setTimeout(() => {
       toggleTrans(cCard);
@@ -177,14 +174,14 @@ function swapCards(direction) {
     cCard.firstElementChild.setAttribute('src', thumbs[cIndex].image);
     rCard.firstElementChild.setAttribute('src', thumbs[rIndex].image);
 
-    // const temp = cCard.innerHTML;
-    // cCard.innerHTML = rCard.innerHTML;
-    // rCard.innerHTML = temp;
+    detailLink.setAttribute('href', 'https://youtu.be/' + thumbs[cIndex].url);
 
-    cCard.style.left = '15%';
+    cCard.style.left = 15 / 2 + '%';
     cCard.style.transform = 'rotate(0deg)';
-    lCard.style.left = '-100%';
-    rCard.style.left = '120%';
+    rCard.style.left = '150%';
+    rCard.style.transform = 'rotate(50deg)';
+    lCard.style.left = '-150%';
+    lCard.style.transform = 'rotate(-50deg)';
 
     setTimeout(() => {
       toggleTrans(cCard);
