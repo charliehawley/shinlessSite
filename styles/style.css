@@ -563,10 +563,19 @@ button:hover {
 }
 
 /* ----------------- CARDS ---------------------  */
+
+#shindex {
+  display: none;
+  width: 90vw;
+  position: absolute;
+  top: 15%;
+  mix-blend-mode: exclusion;
+}
+
 #shindex-desc {
   display: none;
   position: absolute;
-  top: 26vh;
+  top: 25vh;
   font-size: 0.8rem;
   mix-blend-mode: difference;
 }
@@ -589,7 +598,7 @@ button:hover {
   display: none;
   position: absolute;
   background-color: #111;
-  width: 85%;
+  width: 80%;
   aspect-ratio: 1/1;
   overflow: hidden;
   border-radius: 10px;
@@ -621,14 +630,6 @@ button:hover {
 
 #artist {
   padding-bottom: 10px;
-}
-
-#shindex {
-  display: none;
-  width: 90vw;
-  position: absolute;
-  top: 17%;
-  mix-blend-mode: exclusion;
 }
 
 /*--------------- MEDIA QUERIES ---------------*/
