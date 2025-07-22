@@ -563,29 +563,37 @@ button:hover {
 }
 
 /* ----------------- CARDS ---------------------  */
+#shindex-desc {
+  display: none;
+  position: absolute;
+  top: 26vh;
+  font-size: 0.8rem;
+  mix-blend-mode: difference;
+}
+
 .card-container {
+  display: none;
   width: 100vw;
   height: 70vh;
   position: absolute;
-  top: 50%;
+  top: 53%;
   left: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   transform: translate(-50%, -50%);
   overflow: hidden;
-  /* background-color: red; */
 }
 
 .card {
+  display: none;
   position: absolute;
   background-color: #111;
   width: 85%;
   aspect-ratio: 1/1;
   overflow: hidden;
-  border: outset 1px #888;
   border-radius: 10px;
-  box-shadow: 2px 2px 15px #111;
+  box-shadow: 2px 2px 12px #111;
   img {
     width: 100%;
   }
@@ -606,8 +614,9 @@ button:hover {
 }
 
 .card-details {
+  display: none;
   position: absolute;
-  top: 75%;
+  top: 78%;
 }
 
 #artist {
@@ -615,6 +624,7 @@ button:hover {
 }
 
 #shindex {
+  display: none;
   width: 90vw;
   position: absolute;
   top: 17%;
@@ -781,6 +791,18 @@ button:hover {
   .spaced-heading {
     width: 80%;
     font-size: 1.2rem;
+  }
+
+  .sky-container {
+    display: none;
+  }
+
+  #shindex,
+  #shindex-desc,
+  .card,
+  .card-container,
+  .card-details {
+    display: flex;
   }
 
   .promo-vids {

@@ -13,6 +13,102 @@ const thumbs = [
     artist: 'K. Leimer',
     url: 'gMJ1Aj4odh4',
   },
+  {
+    title: 'Attacked The Church',
+    image: './styles/images/music-thumbs/atc.png',
+    artist: 'Dear Earth',
+    url: 'ZA3jw6UKv48',
+  },
+  {
+    title: 'Blue Room',
+    image: './styles/images/music-thumbs/blue-room.png',
+    artist: 'Rafiki',
+    url: 'VN1VLjDaG_A',
+  },
+  {
+    title: 'Dunne Luft',
+    image: './styles/images/music-thumbs/dunne-luft.png',
+    artist: 'K. Leimer',
+    url: 'BJ_IeaUsPMI',
+  },
+  {
+    title: 'Eucharis Told Me',
+    image: './styles/images/music-thumbs/eucharis.png',
+    artist: 'K. Leimer',
+    url: 'nEhKFxeE9fM',
+  },
+  {
+    title: 'Fernsehen im Fruhling',
+    image: './styles/images/music-thumbs/fernsehen.png',
+    artist: 'K. Leimer',
+    url: '2axY5mHRBWk',
+  },
+  {
+    title: 'First Serve',
+    image: './styles/images/music-thumbs/first-serve.png',
+    artist: 'Rafiki',
+    url: 'EXqOYohC39A',
+  },
+  {
+    title: 'Gem',
+    image: './styles/images/music-thumbs/gem.png',
+    artist: 'Oliver Say',
+    url: 'qHxNDLfxVUs',
+  },
+  {
+    title: 'Get Along',
+    image: './styles/images/music-thumbs/get-along.png',
+    artist: 'The Mantis Opera',
+    url: '0XxNhQSj6_I',
+  },
+  {
+    title: 'Interlude / Microcube',
+    image: './styles/images/music-thumbs/interlude.png',
+    artist: 'Rafiki',
+    url: '4Tmbh7vPDyg',
+  },
+  {
+    title: 'Lilac Moor',
+    image: './styles/images/music-thumbs/lilac-moor.png',
+    artist: 'The Gardener',
+    url: 'hQPM5yd1p8c',
+  },
+  {
+    title: 'Nerve',
+    image: './styles/images/music-thumbs/nerve.png',
+    artist: 'Gillbanks',
+    url: 'JfpDMEJoIcE',
+  },
+  {
+    title: 'Peacebloom',
+    image: './styles/images/music-thumbs/peacebloom.png',
+    artist: 'Aphty Khea',
+    url: 'Ff5RUksxE',
+  },
+  {
+    title: 'Prisma Ltd.',
+    image: './styles/images/music-thumbs/prisma.png',
+    artist: 'Rouge Mecanique',
+    url: '10GLMn0CieM',
+  },
+  {
+    title: 'SBM',
+    image: './styles/images/music-thumbs/sbm.png',
+    artist: 'Zee Town and the Dog Boys',
+    url: '2AhufjhhK80',
+  },
+  {
+    title: 'Symbiosis',
+    image: './styles/images/music-thumbs/symbiosis.png',
+    artist: 'The Mantis Opera',
+    url: 'TMacoNki7Rg',
+  },
+  {
+    title: 'Without A Sound',
+    image: './styles/images/music-thumbs/was.png',
+    artist: 'Le Son',
+    url: 'NBICGVAZgx8',
+  },
 ];
 
 let cIndex = Math.floor(Math.random() * thumbs.length);
@@ -134,6 +230,9 @@ function swapCards(direction) {
     rCard.firstElementChild.setAttribute('src', thumbs[rIndex].image);
 
     detailLink.setAttribute('href', 'https://youtu.be/' + thumbs[cIndex].url);
+    cCard.setAttribute('href', 'https://youtu.be/' + thumbs[cIndex].url);
+    artist.innerText = thumbs[cIndex].artist;
+    title.innerText = thumbs[cIndex].title;
 
     cCard.style.left = 15 / 2 + '%';
     cCard.style.transform = 'rotate(0deg)';
@@ -175,6 +274,9 @@ function swapCards(direction) {
     rCard.firstElementChild.setAttribute('src', thumbs[rIndex].image);
 
     detailLink.setAttribute('href', 'https://youtu.be/' + thumbs[cIndex].url);
+    cCard.setAttribute('href', 'https://youtu.be/' + thumbs[cIndex].url);
+    artist.innerText = thumbs[cIndex].artist;
+    title.innerText = thumbs[cIndex].title;
 
     cCard.style.left = 15 / 2 + '%';
     cCard.style.transform = 'rotate(0deg)';
