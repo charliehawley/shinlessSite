@@ -575,7 +575,7 @@ button:hover {
 #shindex-desc {
   display: none;
   position: absolute;
-  top: 25vh;
+  top: 24.5vh;
   font-size: 0.8rem;
   mix-blend-mode: difference;
 }

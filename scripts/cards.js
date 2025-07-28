@@ -164,8 +164,8 @@ window.onload = function () {
     const cardCenter = cCenter;
     const centerOrigin = cardCenter - screenCenter;
 
-    const xBoundL = screenCenter - screenCenter * 0.6;
-    const xBoundR = screenCenter + screenCenter * 0.6;
+    const xBoundL = screenCenter - screenCenter * 0.55;
+    const xBoundR = screenCenter + screenCenter * 0.55;
 
     isSwiping = true;
 
