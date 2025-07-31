@@ -583,7 +583,7 @@ button:hover {
 .card-container {
   display: none;
   width: 100vw;
-  height: 70vh;
+  height: 0px;
   position: absolute;
   top: 53%;
   left: 50%;
@@ -804,6 +804,10 @@ button:hover {
   .card-container,
   .card-details {
     display: flex;
+  }
+
+  .card-container {
+    height: 70vh;
   }
 
   .promo-vids {
