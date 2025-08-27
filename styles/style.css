@@ -632,6 +632,12 @@ button:hover {
   padding-bottom: 10px;
 }
 
+/* ------------------QR 1------------------- */
+
+.qr-title {
+  margin-top: 100px;
+}
+
 /*--------------- MEDIA QUERIES ---------------*/
 
 @media (min-width: 1400px) {
