@@ -5,8 +5,17 @@
   src: url(./assets/outersansblack.otf);
 }
 
+@font-face {
+  font-family: 'montserrat';
+  src: url(./assets/Montserrat.ttf);
+}
+
 .material-symbols-outlined {
-  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+  font-variation-settings:
+    'FILL' 0,
+    'wght' 400,
+    'GRAD' 0,
+    'opsz' 24;
 }
 
 * {
@@ -548,7 +557,9 @@ button {
   );
   font-size: 2rem;
   color: #222;
-  text-shadow: -1px -1px 4px #fff, 1px 1px 4px #474747;
+  text-shadow:
+    -1px -1px 4px #fff,
+    1px 1px 4px #474747;
   border: outset 4px #333;
   border-radius: 3px;
 }
@@ -609,7 +620,9 @@ button:hover {
 }
 
 .trans {
-  transition: left 0.1s ease-out, transform 0.1s ease-out;
+  transition:
+    left 0.1s ease-out,
+    transform 0.1s ease-out;
 }
 
 #cardLeft {
@@ -803,17 +816,50 @@ button:hover {
   .sky-container {
     display: none;
   }
-
+  /* ---------------------mobile--------------------- */
   #shindex,
   #shindex-desc,
   .card,
   .card-container,
   .card-details {
     display: flex;
+    flex-direction: column;
   }
 
   .card-container {
-    height: 70vh;
+    height: 75vh;
+    background-color: #0008;
+    box-shadow: 0 0 20px 40px #0008;
+    border-radius: 6px;
+  }
+
+  #anything-boy-mob {
+    margin: 50px;
+    max-width: 30%;
+  }
+
+  h3,
+  #mob-desc,
+  #smallprint {
+    color: #fff;
+    font-family: 'Montserrat';
+    text-align: center;
+    font-size: xx-large;
+    font-weight: 400;
+  }
+
+  #mob-desc,
+  #smallprint {
+    font-size: x-large;
+    font-weight: 200;
+    padding: 50px;
+    margin-bottom: 0;
+  }
+
+  #smallprint {
+    font-size: small;
+    font-weight: 200;
+    padding-top: 0;
   }
 
   .promo-vids {
