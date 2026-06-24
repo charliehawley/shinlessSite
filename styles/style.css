@@ -800,11 +800,11 @@ button:hover {
     }
   }
 
-  .flex-right {
+  aside.flex-right {
     margin-top: calc(var(--header-2-height) + var(--header-height-small));
-    padding: 30px 0;
+    padding: 30px 0 0 0;
     width: 100%;
-    height: calc(100vh - var(--header-2-height));
+    height: 100%;
 
     p {
       margin-bottom: 50px;
