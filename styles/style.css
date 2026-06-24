@@ -722,6 +722,9 @@ button:hover {
 }
 
 @media (max-width: 768px) {
+  body {
+    overflow: scroll;
+  }
   header {
     height: var(--header-height-small);
   }
@@ -798,7 +801,7 @@ button:hover {
   }
 
   .flex-right {
-    margin-top: var(--header-height-small);
+    margin-top: calc(var(--header-2-height) + var(--header-height-small));
     padding: 30px 0;
     width: 100%;
     height: calc(100vh - var(--header-2-height));
@@ -827,7 +830,7 @@ button:hover {
   }
 
   .card-container {
-    height: 75vh;
+    height: 100%;
     background-color: #0008;
     box-shadow: 0 0 20px 40px #0008;
     border-radius: 6px;
